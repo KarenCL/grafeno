@@ -3,10 +3,12 @@ from grafeno.transformers.index import Transformer as Index
 class Transformer (Index):
 
     def __init__ (self, unique_gram = None, **kwds):
+        # print("(enique.py): __init__")
         super().__init__(**kwds)
         self.__gram = unique_gram
 
     def post_process (self):
+        # print("(enique.py): post_process")
         super().post_process()
         self.__reused_nodes = []
         gram = self.__gram
@@ -31,6 +33,7 @@ class Transformer (Index):
                 first_node[concept] = nid
 
     def post_insertion (self, sentence_nodes):
+        # print("(enique.py): post_insertion")
         super().post_insertion(sentence_nodes + self.__reused_nodes)
         g = self.graph
         node_dict = self.node_from_concept

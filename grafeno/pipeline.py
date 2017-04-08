@@ -88,7 +88,7 @@ def run (pipeline):
     -------
         The result from running the pipeline with the provided arguments.
     '''
-
+    # print("(g/pipeline.py): run")
     # INPUT
     if 'graph' in pipeline:
         graph = pipeline['graph']

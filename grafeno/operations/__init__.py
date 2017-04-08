@@ -19,9 +19,12 @@ from grafeno import Graph as CG
 from importlib import import_module
 
 def operate (graph, operation, **args):
+    # print("(_____op.init___.py): operation operacion -> %r " % operation)
+    # print("(_____op.init___.py): args operacion -> %r " % args)
 
     try:
         m = import_module('grafeno.operations.'+operation)
+        # print("(_____op.init___.py): module -> %r " % m)
     except ImportError:
         raise ValueError('Unknown operation '+operation)
 

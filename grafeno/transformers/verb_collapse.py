@@ -5,11 +5,13 @@ default_main_argument = [ 'dobj', 'iobj', 'ncmod' ]
 class Transformer (PosExtract):
 
     def __init__ (self, sempos={}, main_argument=default_main_argument, **kwds):
+        # print("(___verb_collapse.py): __init__")
         sempos['verb'] = 'v'
         super().__init__(sempos=sempos, **kwds)
         self.__main = main_argument
 
     def transform_dep (self, dep, parent, child):
+        # print("(___verb_collapse.py): transform_dep")
         edge = super().transform_dep(dep, parent, child)
         p = self.nodes[parent]
         if p.get('sempos') == 'v':
@@ -29,6 +31,7 @@ class Transformer (PosExtract):
         return edge
 
     def post_process (self):
+        # print("(___verb_collapse.py): post_process")
         super().post_process()
         for nid, node in list(self.nodes.items()):
             if node.get('sempos') == 'v':

@@ -10,11 +10,15 @@ default_sempos = {
 class Transformer (Base):
 
     def __init__ (self, sempos = default_sempos, **kwds):
+        # print("(t/pos_extract.py): __init__")
         super().__init__(**kwds)
         self.__list = sempos.keys()
         self.__dict = sempos
+        # print("( t/pos_extract.py): sempos es %r" % sempos)
+        
 
     def transform_node (self, msnode):
+        # print("(t/pos_extract.py): transform_node")
         sem = super().transform_node(msnode)
         pos = msnode.get('pos')
         if pos in self.__list:

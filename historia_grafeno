@@ -1,0 +1,500 @@
+   13  sudo pip install --upgrade pip=9.0.0
+   14  sudo pip install --upgrade pip==9.0.0
+   15  ls
+   16  cd ..
+   17  cd ..
+   18  ls
+   19  cd tmp/
+   20  ls
+   21  ./run.sh 
+   22  cd grafeno/
+   23  ls
+   24  sudo pip3 install -r requirements.txt
+   25  sudo pip3.5 install -r requirements.txt
+   26  pip
+   27  sudo pip install --upgrade pip==9.0.1
+   28  sudo pip install -r requirements.txt
+   29  ls
+   30  ls
+   31  find / -name "*pip*"
+   32  find /usr/lib/ -name "*pip*"
+   33  ls -l /usr/lib/python3.5/
+   34  cd /usr/lib/python3.5/
+   35  ls
+   36  cd ..
+   37  ls
+   38  ls
+   39  cd python
+   40  cd python3
+   41  ls
+   42  cd dist-packages/
+   43  ls
+   44  ls
+   45  pip
+   46  ls -la
+   47  ./pip
+   48  cd pip
+   49  ls
+   50  ls
+   51  cd ..
+   52  ls
+   53  ls -l pip*
+   54  ls -ld pip*
+   55  less pip/download.py 
+   56  pip --version
+   57  pip3 --version
+   58  find / -name "make"
+   59  find / -name "make" 2> /dev/nul
+   60  find / -name "make" 2> /dev/null
+   61  make
+   62  man make
+   63  make -n
+   64  make -n python3
+   65  make -n pip3
+   66  ls -l /
+   67  ls -la /
+   68  cd ..
+   69  cd
+   70  ls
+   71  cd tmp/
+   72  ls
+   73  cd grafeno/
+   74  ls
+   75  ./server.py 
+   76  cd ..
+   77  ls
+   78  find . -name "req*"
+   79  cd grafeno/docs/
+   80  sudo pip install -r requirements.txt 
+   81  ls
+   82  cd ..
+   83  ls
+   84  ./server.py 
+   85  bottle
+   86  import
+   87  pip
+   88  python
+   89  python3
+   90  python
+   91  pip3
+   92  sudo pip3
+   93  sudo pip3 install
+   94  ls -ld /usr/lib/python*
+   95  mv /usr/lib/python3 /usr/lib/python3.old
+   96  sudo mv /usr/lib/python3 /usr/lib/python3.old
+   97  ls -ld /usr/lib/python*
+   98  sudo mv /usr/lib/python3.3 /usr/lib/python3.3_old
+   99  sudo mv /usr/lib/python3.old /usr/lib/python3_old
+  100  ls -ld /usr/lib/python*
+  101  pip3
+  102  find /usr/lib/ -name "pkg*"
+  103  sudo apt-get install python3.5
+  104  pip3
+  105  man python3.5
+  106  sudo apt-get install python3.5-pip3
+  107  sudo apt-get install python3.5-pip
+  108  pip3
+  109  pip
+  110  python3.5 -m pip install -U setuptools
+  111  cd tmp/
+  112  pip3
+  113  sudo apt-get install python3.5-pip
+  114  sudo apt-get install python3-pip
+  115  pip3
+  116  pip3
+  117  find / -name 'pkg_resources'
+  118  find / -name 'pkg_resources' 2>/dev/null
+  119  find /usr/ -name 'pkg_resources' 2>/dev/null
+  120  xcopy
+  121  man xcopy
+  122  man cp
+  123  cd /usr/lib/
+  124  cp python3.5 python3.5_original
+  125  ls
+  126  ls python*
+  127  ls -ld python*
+  128  cp -r python3.5 python3.5_original
+  129  sudo cp -r python3.5 python3.5_original
+  130  ls
+  131  ls -dl python*
+  132  find /usr/ -name 'pkg_resources' 2>/dev/null
+  133  ls python3.5/d*
+  134  ls python3.5/d*
+  135  ls -ld python3.5/d*
+  136  ls
+  137  sudo cp -r python3_old/dist-packages python3.5/
+  138  ls -ld python3.5/d*
+  139  pip3
+  140  cd python3.5
+  141  cd dist
+  142  ls
+  143  ls -ld d*
+  144  cd dist-packages/
+  145  ls
+  146  ls
+  147  ls -l
+  148  cd pkg_resources/
+  149  ls
+  150  cd ..
+  151  cd ..
+  152  cd ..
+  153  sudo apt-get purge python3-requests
+  154  sudo apt-get purge python3.5-requests
+  155  sudo apt-get purge python3-requests
+  156  pip3
+  157  sudo apt-get install python3-requests python3-pip
+  158  pip3
+  159  pip3
+  160  ls
+  161  cd python3.5
+  162  ls
+  163  rm -r dist-packages
+  164  man rm
+  165  rm -rf dist-packages
+  166  sudo rm -rf dist-packages
+  167  ls -ld d*
+  168  pip3
+  169  pip3
+  170  pip install --upgrade pip3
+  171  pip3 install --upgrade pip3
+  172  sudo pip install --upgrade pip3
+  173  sudo pip install pip3 -U
+  174  pip
+  175  pip install pip3
+  176  apt-get install pip3
+  177  sudo apt-get install pip3
+  178  ...
+  179  sudo apt-get install python3.5
+  180  sudo apt-get install python3
+  181  cd
+  182  sudo apt-get install python3.5
+  183  ls -ld /usr/lib/python*
+  184  pip3
+  185  sudo apt-get install python3-pip
+  186  pip3
+  187  ls
+  188  ls -la
+  189  less .bash_history 
+  190  pip3 freeze
+  191  less .bash_history 
+  192  man pip3
+  193  pip3 -U
+  194  find /usr/lib/python3/ -name  'pkg_resources'
+  195  sudo apt-get install python3-pip
+  196  pip3
+  197  cd /usr/lib/
+  198  rm -rf python3.5
+  199  sudo rm -rf python3.5
+  200  ls -ld  python *
+  201  ls -ld  python*
+  202  pip
+  203  pip3
+  204  pip3
+  205  sudo apt-get install python3-pip
+  206  pip3
+  207  sudo rm -rf python3
+  208  pip3
+  209  ls
+  210  sudo apt-get install python3-node -v
+  211  pip3 list
+  212  sudo apt-get install -y build-essential python3-dev python-pip
+  213  sudo apt-get install -y python3-pip
+  214  sudo apt-get install -y python3-pip3
+  215  sudo apt-get install -y pip3
+  216  sudo apt-get update
+  217  sudo apt-get upgrade
+  218  find / -name "50unattended-upgrades.ucf-old" 2>/dev/null
+  219  ls -l /etc/apt/apt.conf.d/
+  220  compare
+  221  cmp
+  222  man cmp
+  223  cd  /etc/apt/apt.conf.d/
+  224  cmp 50unattended-upgrades 50unattended-upgrades.ucf-old 
+  225  less 50unattended-upgrades
+  226  cd  /etc/apt/apt.conf.d/
+  227  less 50unattended-upgrades.ucf-old 
+  228  man mv
+  229  mv -f 50unattended-upgrades.ucf-old /home/tfgr/papelera
+  230  sudo mv -f 50unattended-upgrades.ucf-old /home/tfgr/papelera
+  231  ls
+  232  ls -l
+  233  pip3
+  234  ls
+  235  ls -la
+  236  vim .python_history 
+  237  ls
+  238  ls nltk_data
+  239  pyhton3
+  240  l
+  241  sudo apt-get install python3 python3-pip
+  242  sudo apt-get reinstall python3 python3-pip
+  243  sudo apt-get install --reinstall python3 python3-pip
+  244  sudo apt-get update
+  245  sudo apt-get remove --purge python3
+  246  sudo apt-get install --reinstall python3
+  247  sudo apt-get install -f python3
+  248  sudo apt-get install --reinstall -f python3
+  249  sudo dpkg -i --force-overwrite /var/cache/apt/archives/python3_3.5.1-3_amd64.deb
+  250  cd /usr/lib/python3.5_original/
+  251  ls
+  252  sudo dpkg -i --force-overwrite-all /var/cache/apt/archives/python3_3.5.1-3_amd64.deb
+  253  dpkg --force-help
+  254  cd
+  255  ps aux
+  256  sudo apt-get install --reinstall --purge -f python3
+  257  echo $PYTHON_PATH
+  258  echo $PYTHONHOME
+  259  cd /usr/lib
+  260  ls
+  261  sudo mv python3.5_original python3.5
+  262  python3
+  263  pip3
+  264  sudo apt-get install --reinstall python3
+  265  sudo apt-get install --reinstall python3 python3-pip
+  266  python3
+  267  sudo pip3 install pyyaml
+  268  sudo apt-get remove --purge python3-pip
+  269  sudo apt-get autoremove --purge
+  270  ls
+  271  python3
+  272  sudo apt-get install python3-pip
+  273  sudo pip3 install pyyaml
+  274  sudo apt-get install python3-setuptools
+  275  sudo apt-get install --reinstall python3-setuptools
+  276  pip3 install pyyaml
+  277  sudo apt-get install --reinstall python-pkg-resources
+  278  pip3 install pyyaml
+  279  sudo pip3 install pyyaml
+  280  sudo apt-get install --reinstall --force python-pkg-resources
+  281  sudo apt-get install --reinstall -f python-pkg-resources
+  282  sudo pip3 install pyyaml
+  283  sudo apt-get remove python3
+  284  sudo apt-get install --reinstall -f python3*
+  285  cd
+  286  sudo apt-get install --reinstall -f python3*
+  287  sudo apt-get remove python3
+  288  sudo apt-get install --reinstall -f  python3 python3-all
+  289  vim pi
+  290  mv pi tempi
+  291  who
+  292  echo <<<tempi
+  293  echo <<<./tempi
+  294  echo <<./tempi
+  295  cat tempi
+  296  cat <<<tempi
+  297  cat `cat tempi`
+  298  sudo apt-get install --reinstall -f `cat tempi`
+  299  sudo pip3 install pyyaml
+  300  pip3 --version
+  301  pip3 -v
+  302  apt-cache show python3-pip
+  303  sudo pip3 install nlkt
+  304  sudo pip3 install nltk
+  305  sudo pip3 install bottle
+  306  whereis pip
+  307  cd /usr/local/bin
+  308  ls -l
+  309  sudo apt-get remove --purge python3-pip
+  310  ls
+  311  sudo rm -rf pip3 pip3.4
+  312  sudo apt-get install python3-pip
+  313  ls
+  314  whereis pip
+  315  whereis pip3
+  316  sudo pip3 install pyyaml
+  317  cd
+  318  ls
+  319  cat tempi 
+  320  rm -rf tempi 
+  321  cat tmp/
+  322  ls tmp
+  323  ls 1516/
+  324  who
+  325  pip3 install pyyaml
+  326  sudo pip3 install pyyaml
+  327  sudo pip3 uninstall pyyaml
+  328  sudo pip3 uninstall pyparsing
+  329  sudo -H pip3 uninstall pyparsing
+  330  ls /usr/lib/python3/dist-packages/
+  331  mv pyparsing.py pyparsing.old
+  332  sudo mv pyparsing.py pyparsing.old
+  333  cd /usr/lib/python3/dist-packages/
+  334  sudo mv pyparsing.py pyparsing.old
+  335  sudo -H pip3 uninstall pyparsing
+  336  ls -l
+  337  ls
+  338  pip3
+  339  cat .bash_history > tmp/.apuntes_historial
+  340  pip3
+  341  ls
+  342  cd tmp/
+  343  ls
+  344  ls
+  345  ./run.sh 
+  346  cd grafeno/
+  347  ls
+  348  cd docs/
+  349  ls -l
+  350  cd ..
+  351  sudo -H pip3 install -r requirements.txt 
+  352  sudo pip3 uninstall pyyaml
+  353  sudo -H pip3 install -r requirements.txt 
+  354  vim requirements.txt 
+  355  pip3
+  356  sudo -H pip3 install -r requirements.txt 
+  357  sudo apt-get install python3-virtualenv 
+  358  ls
+  359  cd ..
+  360  ls
+  361  cd ..
+  362  mkdir envs
+  363  cd envs/
+  364  man -k virt
+  365  virtualenv grafenv
+  366  sudo pip3 install virtualenv 
+  367  virtualenv grafenv
+  368  whereis virtualenv
+  369  find /usr/ | grep virtualenv
+  370  /usr/lib/python3/dist-packages/virtualenv.py grafenv
+  371  pyhon3 /usr/lib/python3/dist-packages/virtualenv.py grafenv
+  372  python3 /usr/lib/python3/dist-packages/virtualenv.py grafenv
+  373  rm -rf grafenv
+  374  #python3 /usr/lib/python3/dist-packages/virtualenv.py grafenv
+  375  whereis python3
+  376  python3 /usr/lib/python3/dist-packages/virtualenv.py -p /usr/bin/python3 grafenv
+  377  ls
+  378  cd grafenv/
+  379  ls
+  380  . bin/activate
+  381  screen -ls
+  382  screen -r antonio
+  383  screen -r 28652.antonio
+  384  ls
+  385  screen
+  386  screen -s antonio
+  387  screen -S antonio
+  388  ls
+  389  cd envs/grafenv/
+  390  . bin/activate
+  391  git clone https://github.com/agarsev/grafeno.git
+  392  history 
+  393  ls
+  394  git clone https://github.com/agarsev/grafeno-summarization-workflow.git
+  395  cd grafeno-summarization-workflow/
+  396  ls
+  397  git submodule init
+  398  git submodule update
+  399  cd grafeno/
+  400  ls
+  401  pip3 install -r requirements.txt 
+  402  pyhton3
+  403  python3
+  404  pip3
+  405  pip3 install pyyaml
+  406  uname -a
+  407  screen
+  408  sudo pip3 install pyyaml
+  409  sudo pip3 uninstall pyyaml
+  410  sudo pip3 install -r requirements.txt 
+  411  sudo pip3 uninstall pyparsing
+  412  pip3 install -r requirements.txt 
+  413  lsb_release
+  414  screen
+  415  sudo -H pip3 uninstall pyparsing
+  416  screen
+  417  pip3 install -r requirements.txt 
+  418  sudo -H pip3 install -r requirements.txt 
+  419  who
+  420  pushd
+  421  ls
+  422  pushd 
+  423  pushd ~
+  424  ls ..
+  425  popd
+  426  clear
+  427  pyhon3
+  428  python3
+  429  pip3 install nltk
+  430  sudo pip3 install nltk
+  431  vim requirements.txt 
+  432  sudo pip3 install -r requirements.txt 
+  433  vim requirements.txt 
+  434  fg
+  435  sudo pip3 install -r requirements.txt 
+  436  ls
+  437  pip3 install -r requirements.txt
+  438  python3
+  439  deactivate 
+  440  python3
+  441  vim README.md 
+  442  cd
+  443  ls
+  444  wget https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-trusty-i386.deb
+  445  ls
+  446  sudo dpkg -i freeling-4.0-trusty-i386.deb 
+  447  sudo apt-get install libboost-program-options1.54.0 libboost-regex1.54.0 libboost-filesystem1.54.0 libboost-system1.54.0  libicu52
+  448  sudo apt-get install libboost-program-options1.54.0 libboost-regex1.54.0 libboost-filesystem1.54.0 libboost-system1.54.0  libicu52
+  449  ls
+  450  rm freeling-4.0-trusty-i386.deb 
+  451  wget https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-xenial-i386.deb
+  452  dpkg -i freeling-4.0-xenial-i386.deb 
+  453  sudo dpkg -i freeling-4.0-xenial-i386.deb 
+  454  sudo apt-get install libboost-program-options1.58.0 libboost-regex1.58.0 libboost-filesystem1.58.0 libboost-system1.58.0 libicu55
+  455  sudo apt-get install libboost-dev libboost-regex-dev libicu-dev libboost-system-dev libboost-program-options-dev libboost-thread-dev zlib1g-dev
+  456  sudo apt-get -f install
+  457  analyze
+  458  ls
+  459  cd envs/grafenv/grafeno
+  460  ls
+  461  ./test.py 
+  462  ./test.py --help
+  463  ./test.py -s "John loves Mary" -t "semantic" -p
+  464  ls 
+  465  ls confi
+  466  ./test.py -s "John loves Mary" -t "all" -p
+  467  ./test.py -s "John loves Mary" -t "all"
+  468  ./test.py -s "John loves Mary" -t "all" -l triplets
+  469  cd ..
+  470  ls
+  471  node
+  472  ls
+  473  cd grafeno-summarization-workflow/
+  474  ls
+  475  ./run.sh 
+  476  npm install
+  477  ./run.sh 
+  478  vim run.sh 
+  479  grafeno/test.py 
+  480  vim run.sh 
+  481  grafeno/test.py -f texts/example -c experiments/default.yaml 
+  482  grafeno/test.py -f texts/example -c experiments/default.yaml 
+  483  vim run.sh 
+  484  ls texts/
+  485  cat texts/example 
+  486  grafeno/test.py -f texts/example -c experiments/default.yaml
+  487  cd grafeno/
+  488  ./test.py -f ../texts/example -c configs/summary.yaml 
+  489  ./test.py -f ../texts/example -c configs/semantic.yaml 
+  490  ./test.py -s "John loves Mary" -c configs/semantic.yaml 
+  491  ./test.py -s "John loves Mary. Dogs like bones. John likes dogs." -c configs/semantic.yaml 
+  492  history
+  493  history > historia_grafeno
+  494  vim historia_grafeno 
+  495  mv historia_grafeno ~/historia_instalar_grafeno_sin_filtrar.txt
+  496  cd
+  497  cat historia_instalar_grafeno_sin_filtrar.txt 
+  498  exit
+  499  history
+  500  vim historia_grafeno
+  501  ls
+  502  cd envs
+  503  dir
+  504  cd grafenv
+  505  dir
+  506  . bin activate
+  507  . bin/activate
+  508  dir
+  509  cd grafeno
+  510  dir
+  511  vim historia_grafeno 
+  512  history > historia_grafeno

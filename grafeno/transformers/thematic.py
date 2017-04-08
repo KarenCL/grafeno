@@ -3,21 +3,27 @@ from grafeno.transformers.pos_extract import Transformer as PosExtract
 class Transformer (PosExtract):
 
     predication = {
-            'ncsubj': ('AGENT', 1.0, {'n'}),
+            'subj': ('AGENT', 1.0, {'n'}),
             'dobj': ('THEME', 1.0, None),
             'iobj': ('IOBJ', 1.0, None),
             }
 
     def transform_node (self, msnode):
+        # print("(t/thematic.py): transform_node")
         sem = super().transform_node(msnode)
         if sem.get('sempos') == 'v':
             sem['tense'] = msnode.get('vform')
         return sem
 
     def transform_dep (self, dep, pid, cid):
+        # print("(t/thematic.py): transform_dep")
+        # se sacan las aristas de base.transform_dep
         edge = super().transform_dep(dep, pid, cid)
         p = self.nodes[edge['parent']]
         c = self.nodes[edge['child']]
+        # print("(t/thematic.py): transform_dep: edge-->%r" % edge)
+        # print("(t/thematic.py): transform_dep: parent-->%r" % p)
+        # print("(t/thematic.py): transform_dep: child-->%r" % c)
         if not('concept' in p and 'concept' in c and p.get('sempos')=='v'):
             return edge
         if dep in self.predication:
@@ -35,6 +41,7 @@ class Transformer (PosExtract):
         return edge
 
     def post_process (self):
+        # print("(t/thematic.py): post_process")
         super().post_process()
         for nid, n in self.nodes.items():
             if n.get('passive'):

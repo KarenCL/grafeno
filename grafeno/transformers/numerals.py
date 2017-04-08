@@ -3,6 +3,7 @@ from grafeno.transformers.base import Transformer as Base
 class Transformer (Base):
 
     def transform_node (self, ms):
+        print("(t/numerals.py): transform_node")
         sem = super().transform_node(ms)
         if ms.get('lemma','').isnumeric():
             sem['concept'] = ms['lemma']

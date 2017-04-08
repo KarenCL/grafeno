@@ -4,10 +4,12 @@ class Transformer (Base):
     '''Utility class with useful methods'''
 
     def __init__ (self, **kwds):
+        # print("(__utils.py): __init__")
         super().__init__(**kwds)
         self.__i = 0
 
     def sprout (self, nid, functor_or_edge, concept_or_node):
+        # print("(__utils.py): sprout")
         new_id = nid+'__'+str(self.__i)
         self.__i += 1
         try:

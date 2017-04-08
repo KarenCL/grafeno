@@ -3,9 +3,11 @@ from grafeno.linearizers.base import Linearizer as Base
 class Linearizer (Base):
 
     def get_root_nodes (self):
+        # print("(l/simple_nlg.py): get_root_nodes")
         return [n['id'] for n in self.graph.nodes() if n.get('sempos')=='v']
 
     def expand_node (self, n):
+        # print("(l/simple_nlg.py): expand_node")
         exps = super().expand_node(n)
         ret = []
         for n in exps:
@@ -34,6 +36,7 @@ class Linearizer (Base):
         return ret
 
     def process_node (self, n):
+        # print("(l/simple_nlg.py): process_node")
         word = super().process_node(n)
         sempos = n.get('sempos')
         if sempos == 'n':

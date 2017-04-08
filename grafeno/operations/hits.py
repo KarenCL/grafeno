@@ -2,7 +2,7 @@ from collections import defaultdict
 import math
 
 def hits (graph, epsilon = 1e-5, max_its = 100):
-
+    # print("(____hits.py): epsilon_%r, max_its_%r" % (epsilon, max_its))
     auth = defaultdict(lambda:1)
     hub = defaultdict(lambda:1)
 

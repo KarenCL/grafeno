@@ -15,6 +15,7 @@ class Transformer (WNGet):
         self.__hyper = concept_class_hypernyms
 
     def post_process (self):
+        print("(t/concept_class.py): post_process")
         super().post_process()
         for n in self.nodes.values():
             ss = n.get('synset')

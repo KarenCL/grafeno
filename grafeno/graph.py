@@ -63,6 +63,7 @@ class Graph:
     '''
 
     def __init__ (self, original=None, transformer=None, transformer_args={}, text=None, subgraph=None):
+        # print('(g/graph.py): __init__')
         if original:
             self._next_node = original._next_node
             if subgraph:
@@ -99,6 +100,7 @@ class Graph:
         int
             The graph id of the newly created node.
         '''
+        # print('(g/graph.py): add_node')
         nid = self._next_node
         self._next_node += 1
         gram['id'] = nid
@@ -125,6 +127,7 @@ class Graph:
         ValueError
             When the head or dependent id's are not valid.
         '''
+        # print('(g/graph.py): add_edge')
         if head not in self._g or dependent not in self._g:
             raise ValueError('Head or dependent are not in the graph ('+str(functor)+')')
         self._g.add_edge(head, dependent, functor=functor, **gram)
@@ -138,6 +141,7 @@ class Graph:
         text : string
             A clean text to process and add to the graph.
         '''
+        # print('(g/graph.py): add_text')
         result = parse(text)
         self.transformer.transform_text(result)
 
@@ -146,6 +150,7 @@ class Graph:
     def nodes (self):
         '''Returns a list of all the nodes in the graph. Each node is
         represented as a dictionary of concept and further grammatemes.'''
+        # print('(g/graph.py): nodes')
         return [gram for n, gram in self._g.nodes(data=True)]
 
     def edges (self, nid):
@@ -161,6 +166,7 @@ class Graph:
             A list of node ids for all the nodes where an edge exists between
             the node identified by `nid` and them.
         '''
+        # print('(g/graph.py): edges')
         return self._g[nid]
 
     # Output
@@ -179,6 +185,7 @@ class Graph:
             included.
         '''
         import matplotlib.pyplot as plt
+        # print('(g/graph.py): draw')
         if bunch:
             g = self._g.subgraph(bunch)
         else:
@@ -204,8 +211,10 @@ class Graph:
         -------
             A string with the graph data encoded in JSON.
         '''
+        # print('(g/graph.py): to_json')
         class BestEffortEncoder(json.JSONEncoder):
             def default(self, obj):
+                # print('(g/graph.py): to_json::BestEffortEncoder - default')
                 return repr(obj)
         g = self._g
         if with_labels:
@@ -233,6 +242,7 @@ class Graph:
         -------
             A string, the result of running the linearizer on the graph.
         '''
+        # print('(g/graph.py): linearize')
         if linearizer:
             self.linearizer = linearizer(graph=self, **linearizer_args)
         return self.linearizer.linearize()

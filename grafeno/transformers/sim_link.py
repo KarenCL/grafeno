@@ -8,6 +8,7 @@ from grafeno.transformers.wordnet import Transformer as WNGet
 class Transformer (WNGet):
 
     def __init__ (self, sim_threshold = 0.1, sim_weight = 1, **kwds):
+        # print("(____sim_link.py): dentro de init")
         global brown_ic
         super().__init__(**kwds)
         if not brown_ic:
@@ -16,6 +17,7 @@ class Transformer (WNGet):
         self.__weight = sim_weight
 
     def get_similarity (self, a, b):
+        # print("(____sim_link.py): dentro de get_similarity")
         if 'synset' not in a or 'synset' not in b \
                 or a.get('sempos','x') != b.get('sempos','-'):
             return 0
@@ -24,6 +26,7 @@ class Transformer (WNGet):
         return sa.jcn_similarity(sb, brown_ic)
 
     def post_insertion (self, sentence_nodes):
+        # print("(____sim_link.py): dentro de post_insertion")
         super().post_insertion(sentence_nodes)
         g = self.graph
         threshold = self.__threshold

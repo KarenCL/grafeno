@@ -39,6 +39,7 @@ class Transformer (Utils):
         return sem
 
     def transform_dep (self, dep, parent, child):
+        # print("(t/genitive.py): transform_dep")
         edge = super().transform_dep(dep, parent, child)
         c = self.nodes[edge['child']]
         if 'true_parent' in c:

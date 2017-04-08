@@ -5,12 +5,15 @@ def cluster (cgraph, hubratio = 0.2):
     g = nx.Graph(cgraph._g)
 
     def weight (n, m):
+        #print("(_____op.cluster.py): dentro de weight")
         return g[n][m].get('weight',1)
 
     def intra_con (a):
+        # print("(_____op.cluster.py): dentro de intra_con")
         return sum(weight(n, m) for n, m in combinations(a, 2) if m in g[n])
 
     def inter_con (a, b):
+        # print("(_____op.cluster.py): dentro de inter_con")
         return sum(weight(n, m) for n in a for m in b if m in g[n])
 
     saliences = sorted(g.nodes(), reverse=True, \
@@ -61,7 +64,10 @@ def cluster (cgraph, hubratio = 0.2):
     return HVS, clusters
 
 def operate (graph, **args):
+    # print("(_____op.cluster.py): dentro de cluster.operate")
     HVS, clusters = cluster(graph, **args)
     graph.gram['HVS'] = HVS
     graph.gram['clusters'] = clusters
+    # print("(_____op.cluster.py): contenido de HVS ->\n %r" % HVS)
+    # print("(_____op.cluster.py): contenido de clusters ->\n %r" % clusters)
     return graph

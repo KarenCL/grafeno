@@ -7,9 +7,11 @@ class Linearizer (Base):
         self.__use_comps = make_comp_triplets
 
     def get_root_nodes (self):
+        # print("(l/semtriplets.py): get_root_nodes")
         return [n['id'] for n in self.graph.nodes() if n['sempos'] in {'v','n'}]
 
     def expand_node (self, n):
+        # print("(l/semtriplets.py): expand_node")
         exps = super().expand_node(n)
         ret = []
         nodes = self.graph.node

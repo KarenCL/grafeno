@@ -3,14 +3,17 @@ from grafeno.transformers.thematic import Transformer as Thematic
 class Transformer (Thematic):
 
     def __init__ (self, guess_phrasals = True, **kwds):
+        print('(t/phrasal.py): __init__')
         super().__init__(**kwds)
         self.__guess = guess_phrasals
 
     def pre_process (self, tree):
+        print('(t/phrasal.py): pre_process')
         super().pre_process(tree)
         self.__first_prep = None
 
     def transform_node (self, msnode):
+        print('(t/phrasal.py): transform_node')
         sem = super().transform_node(msnode)
         if msnode['pos'] == 'particle':
             sem['particle'] = msnode['lemma']
@@ -19,6 +22,7 @@ class Transformer (Thematic):
         return sem
 
     def transform_dep (self, dep, pid, cid):
+        print('(t/phrasal.py): transform_dep')
         edge = super().transform_dep(dep, pid, cid)
         p = self.nodes[pid]
         c = self.nodes[cid]
@@ -27,6 +31,7 @@ class Transformer (Thematic):
         return edge
 
     def post_process (self):
+        print('(t/phrasal.py): post_process')
         super().post_process()
         if self.__guess:
             for nid, node in self.nodes.items():

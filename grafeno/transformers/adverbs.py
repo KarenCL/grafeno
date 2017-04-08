@@ -4,6 +4,7 @@ class Transformer (PosExtract):
     '''Processes adverbial modification as ``ATTR``.'''
 
     def transform_dep (self, dep, parent, child):
+        # print("(t/adverbs.py): transform_dep")
         edge = super().transform_dep(dep, parent, child)
         p = self.nodes[parent]
         c = self.nodes[child]

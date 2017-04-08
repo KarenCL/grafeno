@@ -41,7 +41,9 @@ class Transformer:
         List of semantic edges obtained for the sentence being processed.
     '''
 
+    '''el parametro self se refiere a la clase en cuestion. Como el this de Java, creo    '''
     def __init__ (self, graph=None, **kwds):
+        # print('(t/base.py): __init__')
         self.stage = ""
         self.graph = graph
 
@@ -49,15 +51,19 @@ class Transformer:
         '''Transforms a list of sentences into the semantic graph.
 
         It shouldn't be overriden.'''
+        # print('(t/base.py): transform_text')
+        # sentence tiene el texto de entrada ya convertido en formato json. Se hace dentro de graph.py
         self.stage = "before_all"
         self.before_all()
         for s in sentences:
+        #las s de sentences son las "dependencies" de cada sentencia...
             self._transform_sentence(s)
         self.stage = "after_all"
         self.after_all()
         self.stage = ""
 
     def _transform_sentence (self, tree):
+        # print('(t/base.py): _transform_sentence')
         self.stage = "pre_process"
         self.pre_process(tree)
         self.stage = "extract_dependencies"
@@ -84,11 +90,16 @@ class Transformer:
         tree : dict
             The dependency parse of the sentence.
         '''
+        # print('(t/base.py): pre_process')
         self.nodes = {} # ID -> dict { concept }
         self.edges = [] # dict { parent(ID), child(ID), functor }
 
     def _process_nodes (self, tree):
+        # print('(t/base.py): _process_nodes')
         for ms in tree['tokens']:
+            # self.transform_node(ms): se llama a la funcion transform_node
+            #  de thematic, que es subclase de pos_extract.py 
+            # print('(t/base.py): _process_nodes: ms-->%r'% ms)
             self.nodes[ms['id']] = self.transform_node(ms)
 
     def transform_node (self, msnode):
@@ -106,9 +117,11 @@ class Transformer:
         -------
         :ref:`semantic node <semantic_nodes>`
         '''
+        # print('(t/base.py): transform_node')
         return { 'id': msnode['id'] }
 
     def _extract_dependencies (self, tree):
+        # print('(t/base.py): _extract_dependencies')
         root = tree['dependencies'][0]
         deps = deque([(c, root['token']) for c in root.get('children', [])])
         ret = []
@@ -123,7 +136,12 @@ class Transformer:
         return ret
 
     def _process_edges (self, deps):
+        # print('(t/base.py): _process_edges')
+        # print('(t/base.py): _process_edges -->deps-->%s' % deps)
         for name, parent, child in deps:
+            # print("(t/base.py): _process_edges-->name:-->%r" % name)
+            # print("(t/base.py): _process_edges-->parent:-->%r" % parent)
+            # print("(t/base.py): _process_edges-->child:-->%r" % child)
             try:
                 self.edges.append(self.transform_dep(name, parent, child))
             except KeyError:
@@ -149,6 +167,7 @@ class Transformer:
         -------
         :ref:`semantic edge <semantic_edges>`
         '''
+        # print('(t/base.py): transform_dep')
         return { 'parent': parent,
                  'child': child }
 
@@ -161,6 +180,7 @@ class Transformer:
 
         .. note:: Can be done only during post_process.
         '''
+        # print('(t/base.py): merge')
         if self.stage != 'post_process':
             raise AssertionError("merge must be called during post_process")
         del self.nodes[b]
@@ -182,9 +202,11 @@ class Transformer:
         available in the transformer's (self) ``nodes`` and ``edges``
         properties.
         '''
+        # print('(t/base.py): post_process')
         pass
 
     def _add_to_graph (self):
+        # print('(t/base.py): _add_to_graph')
         g = self.graph
         real_id = {}
         for id, node in self.nodes.items():
@@ -210,12 +232,15 @@ class Transformer:
             The definitive (graph) ids of the nodes that were produced by
             analyzing the current sentence.
         '''
+        # print('(t/base.py): post_insertion')
         pass
 
     def before_all (self):
         '''Called at the beggining of processing a full text, before any sentences.'''
+        # print('(t/base.py): before_all')
         pass
 
     def after_all (self):
         '''Called at the end of processing a full text, after all sentences.'''
+        # print('(t/base.py): after_all')
         pass

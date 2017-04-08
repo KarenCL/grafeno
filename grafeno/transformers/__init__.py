@@ -99,6 +99,7 @@ for m in glob.glob(dirname(__file__)+"/*.py"):
         transformers[f] = import_module('grafeno.transformers.'+f, __name__).Transformer
 
 def get_pipeline (modules):
+    print("(t/__init__.py): get_pipeline")
     '''Takes a list of transformers and returns a transformer class which
     subclasses them all'''
     name = '__'.join(modules)

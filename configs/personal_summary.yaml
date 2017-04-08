@@ -1,0 +1,22 @@
+%YAML 1.2
+---
+# Summarizes a text by extracting the most relevant sentences.
+transformers:
+    - pos_extract
+    - sim_link
+    - extend
+    - unique
+    - sentences
+transformer_args:
+    sempos: { noun: n }
+    unique_gram: { hyper: [ True ] }
+    extended_sentence_edges: [ HYP ]
+operations:
+    - op: cluster
+    - op: rename_concepts
+linearizers:
+    - cluster_extract
+linearizer_args:
+    summary_length: 100
+    summary_margin: 10
+    normalize_sentence_scores: True

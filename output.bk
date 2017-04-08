@@ -1,0 +1,384 @@
+(./test.py): dentro del try
+(./test.py): args.transformers-> ['thematic']
+(./test.py): args.linearizers-> ['semtriplets']
+(g/pipeline.py): run
+(t/__init__.py): get_pipeline
+(g/graph.py): __init__
+(t/pos_extract.py): __init__
+(t/base.py): __init__
+( t/pos_extract.py): sempos es {'verb': 'v', 'noun': 'n', 'adverb': 'r', 'adjective': 'j'}
+(g/graph.py): add_text
+(t/base.py): transform_text
+(t/base.py): before_all
+(t/base.py): _transform_sentence
+(t/base.py): pre_process
+(t/base.py): _extract_dependencies
+(t/base.py): _process_nodes
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'Mi', 'tag': 'DP1CSS', 'lemma': 'mi', 'gen': 'common', 'person': '1', 'possessornum': 'singular', 'type': 'possessive', 'ctag': 'DP', 'id': 't1.1', 'pos': 'determiner'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'gato', 'tag': 'NCMS000', 'lemma': 'gato', 'gen': 'masculine', 'type': 'common', 'ctag': 'NC', 'id': 't1.2', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'se', 'tag': 'P00CN00', 'lemma': 'se', 'gen': 'common', 'num': 'invariable', 'ctag': 'P0', 'id': 't1.3', 'pos': 'pronoun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'llama', 'tag': 'VMIP3S0', 'lemma': 'llamar', 'mood': 'indicative', 'tense': 'present', 'person': '3', 'type': 'main', 'ctag': 'VMI', 'id': 't1.4', 'pos': 'verb'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'Tom', 'tag': 'NP00000', 'lemma': 'tom', 'type': 'proper', 'ctag': 'NP', 'id': 't1.5', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': '.', 'tag': 'Fp', 'lemma': '.', 'type': 'period', 'ctag': 'Fp', 'id': 't1.6', 'pos': 'punctuation'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_edges
+(t/base.py): _process_edges -->deps-->[('spec', 't1.2', 't1.1'), ('punc', 't1.4', 't1.6'), ('dobj', 't1.4', 't1.5'), ('subj', 't1.4', 't1.2'), ('mphes', 't1.4', 't1.3')]
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't1.1', 'parent': 't1.2'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'n', 'concept': 'gato', 'id': 't1.2'}
+(t/thematic.py): transform_dep: child-->{'id': 't1.1'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't1.6', 'parent': 't1.4'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'llamar', 'id': 't1.4'}
+(t/thematic.py): transform_dep: child-->{'id': 't1.6'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't1.5', 'parent': 't1.4'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'llamar', 'id': 't1.4'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'tom', 'id': 't1.5'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't1.2', 'parent': 't1.4'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'llamar', 'id': 't1.4'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'gato', 'id': 't1.2'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't1.3', 'parent': 't1.4'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'llamar', 'id': 't1.4'}
+(t/thematic.py): transform_dep: child-->{'id': 't1.3'}
+(t/thematic.py): post_process
+(t/base.py): post_process
+(t/base.py): _add_to_graph
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_edge
+(g/graph.py): add_edge
+(t/base.py): post_insertion
+(t/base.py): _transform_sentence
+(t/base.py): pre_process
+(t/base.py): _extract_dependencies
+(t/base.py): _process_nodes
+(t/base.py): _process_nodes: ms-->{'form': 'Tom', 'tag': 'NP00000', 'lemma': 'tom', 'type': 'proper', 'ctag': 'NP', 'id': 't2.1', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'vive', 'tag': 'VMIP3S0', 'lemma': 'vivir', 'mood': 'indicative', 'tense': 'present', 'person': '3', 'type': 'main', 'ctag': 'VMI', 'id': 't2.2', 'pos': 'verb'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'en', 'tag': 'SP', 'lemma': 'en', 'type': 'preposition', 'ctag': 'SP', 'id': 't2.3', 'pos': 'adposition'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'su', 'tag': 'DP3CSN', 'lemma': 'su', 'gen': 'common', 'person': '3', 'possessornum': 'invariable', 'type': 'possessive', 'ctag': 'DP', 'id': 't2.4', 'pos': 'determiner'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'casa', 'tag': 'NCFS000', 'lemma': 'casa', 'gen': 'feminine', 'type': 'common', 'ctag': 'NC', 'id': 't2.5', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': '.', 'tag': 'Fp', 'lemma': '.', 'type': 'period', 'ctag': 'Fp', 'id': 't2.6', 'pos': 'punctuation'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_edges
+(t/base.py): _process_edges -->deps-->[('spec', 't2.5', 't2.4'), ('comp', 't2.3', 't2.5'), ('punc', 't2.2', 't2.6'), ('pobj', 't2.2', 't2.3'), ('subj', 't2.2', 't2.1')]
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't2.4', 'parent': 't2.5'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'n', 'concept': 'casa', 'id': 't2.5'}
+(t/thematic.py): transform_dep: child-->{'id': 't2.4'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't2.5', 'parent': 't2.3'}
+(t/thematic.py): transform_dep: parent-->{'id': 't2.3'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'casa', 'id': 't2.5'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't2.6', 'parent': 't2.2'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'vivir', 'id': 't2.2'}
+(t/thematic.py): transform_dep: child-->{'id': 't2.6'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't2.3', 'parent': 't2.2'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'vivir', 'id': 't2.2'}
+(t/thematic.py): transform_dep: child-->{'id': 't2.3'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't2.1', 'parent': 't2.2'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'vivir', 'id': 't2.2'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'tom', 'id': 't2.1'}
+(t/thematic.py): post_process
+(t/base.py): post_process
+(t/base.py): _add_to_graph
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_edge
+(t/base.py): post_insertion
+(t/base.py): _transform_sentence
+(t/base.py): pre_process
+(t/base.py): _extract_dependencies
+(t/base.py): _process_nodes
+(t/base.py): _process_nodes: ms-->{'form': 'En', 'tag': 'SP', 'lemma': 'en', 'type': 'preposition', 'ctag': 'SP', 'id': 't3.1', 'pos': 'adposition'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'la', 'tag': 'DA0FS0', 'lemma': 'el', 'gen': 'feminine', 'type': 'article', 'ctag': 'DA', 'id': 't3.2', 'pos': 'determiner'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'casa', 'tag': 'NCFS000', 'lemma': 'casa', 'gen': 'feminine', 'type': 'common', 'ctag': 'NC', 'id': 't3.3', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'de', 'tag': 'SP', 'lemma': 'de', 'type': 'preposition', 'ctag': 'SP', 'id': 't3.4', 'pos': 'adposition'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'Tom', 'tag': 'NP00000', 'lemma': 'tom', 'type': 'proper', 'ctag': 'NP', 'id': 't3.5', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'hay', 'tag': 'VMIP3S0', 'lemma': 'haber', 'mood': 'indicative', 'tense': 'present', 'person': '3', 'type': 'main', 'ctag': 'VMI', 'id': 't3.6', 'pos': 'verb'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'un', 'tag': 'DI0MS0', 'lemma': 'uno', 'gen': 'masculine', 'type': 'indefinite', 'ctag': 'DI', 'id': 't3.7', 'pos': 'determiner'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'ratón', 'tag': 'NCMS000', 'lemma': 'ratón', 'gen': 'masculine', 'type': 'common', 'ctag': 'NC', 'id': 't3.8', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'llamado', 'tag': 'VMP00SM', 'lemma': 'llamar', 'mood': 'participle', 'gen': 'masculine', 'type': 'main', 'ctag': 'VMP', 'id': 't3.9', 'pos': 'verb'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'Jerry', 'tag': 'NP00000', 'lemma': 'jerry', 'type': 'proper', 'ctag': 'NP', 'id': 't3.10', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': '.', 'tag': 'Fp', 'lemma': '.', 'type': 'period', 'ctag': 'Fp', 'id': 't3.11', 'pos': 'punctuation'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_edges
+(t/base.py): _process_edges -->deps-->[('comp', 't3.4', 't3.5'), ('mod', 't3.3', 't3.4'), ('spec', 't3.3', 't3.2'), ('mod', 't3.8', 't3.9'), ('spec', 't3.8', 't3.7'), ('comp', 't3.1', 't3.3'), ('punc', 't3.6', 't3.11'), ('subj', 't3.6', 't3.10'), ('dobj', 't3.6', 't3.8'), ('adjt', 't3.6', 't3.1')]
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.5', 'parent': 't3.4'}
+(t/thematic.py): transform_dep: parent-->{'id': 't3.4'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'tom', 'id': 't3.5'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.4', 'parent': 't3.3'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'n', 'concept': 'casa', 'id': 't3.3'}
+(t/thematic.py): transform_dep: child-->{'id': 't3.4'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.2', 'parent': 't3.3'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'n', 'concept': 'casa', 'id': 't3.3'}
+(t/thematic.py): transform_dep: child-->{'id': 't3.2'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.9', 'parent': 't3.8'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'n', 'concept': 'ratón', 'id': 't3.8'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'v', 'tense': None, 'concept': 'llamar', 'id': 't3.9'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.7', 'parent': 't3.8'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'n', 'concept': 'ratón', 'id': 't3.8'}
+(t/thematic.py): transform_dep: child-->{'id': 't3.7'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.3', 'parent': 't3.1'}
+(t/thematic.py): transform_dep: parent-->{'id': 't3.1'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'casa', 'id': 't3.3'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.11', 'parent': 't3.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'haber', 'id': 't3.6'}
+(t/thematic.py): transform_dep: child-->{'id': 't3.11'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.10', 'parent': 't3.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'haber', 'id': 't3.6'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'jerry', 'id': 't3.10'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.8', 'parent': 't3.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'haber', 'id': 't3.6'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'ratón', 'id': 't3.8'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't3.1', 'parent': 't3.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'haber', 'id': 't3.6'}
+(t/thematic.py): transform_dep: child-->{'id': 't3.1'}
+(t/thematic.py): post_process
+(t/base.py): post_process
+(t/base.py): _add_to_graph
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_edge
+(g/graph.py): add_edge
+(t/base.py): post_insertion
+(t/base.py): _transform_sentence
+(t/base.py): pre_process
+(t/base.py): _extract_dependencies
+(t/base.py): _process_nodes
+(t/base.py): _process_nodes: ms-->{'form': 'Siempre', 'tag': 'RG', 'lemma': 'siempre', 'type': 'general', 'ctag': 'RG', 'id': 't4.1', 'pos': 'adverb'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'que', 'tag': 'CS', 'lemma': 'que', 'type': 'subordinating', 'ctag': 'CS', 'id': 't4.2', 'pos': 'conjunction'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': 'Tom', 'tag': 'NP00000', 'lemma': 'tom', 'type': 'proper', 'ctag': 'NP', 'id': 't4.3', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'come', 'tag': 'VMIP3S0', 'lemma': 'comer', 'mood': 'indicative', 'tense': 'present', 'person': '3', 'type': 'main', 'ctag': 'VMI', 'id': 't4.4', 'pos': 'verb'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': ',', 'tag': 'Fc', 'lemma': ',', 'type': 'comma', 'ctag': 'Fc', 'id': 't4.5', 'pos': 'punctuation'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'mira', 'tag': 'VMM02S0', 'lemma': 'mirar', 'mood': 'imperative', 'person': '2', 'type': 'main', 'ctag': 'VMM', 'id': 't4.6', 'pos': 'verb'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'la', 'tag': 'DA0FS0', 'lemma': 'el', 'gen': 'feminine', 'type': 'article', 'ctag': 'DA', 'id': 't4.7', 'pos': 'determiner'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'num': 'singular', 'form': 'tele', 'tag': 'NCFS000', 'lemma': 'tele', 'gen': 'feminine', 'type': 'common', 'ctag': 'NC', 'id': 't4.8', 'pos': 'noun'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_nodes: ms-->{'form': '.', 'tag': 'Fp', 'lemma': '.', 'type': 'period', 'ctag': 'Fp', 'id': 't4.9', 'pos': 'punctuation'}
+(t/thematic.py): transform_node
+(t/pos_extract.py): transform_node
+(t/base.py): transform_node
+(t/base.py): _process_edges
+(t/base.py): _process_edges -->deps-->[('subj', 't4.4', 't4.3'), ('spec', 't4.8', 't4.7'), ('punc', 't4.2', 't4.5'), ('comp', 't4.2', 't4.4'), ('punc', 't4.6', 't4.9'), ('dobj', 't4.6', 't4.8'), ('subj', 't4.6', 't4.2'), ('adjt', 't4.6', 't4.1')]
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.3', 'parent': 't4.4'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'comer', 'id': 't4.4'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'tom', 'id': 't4.3'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.7', 'parent': 't4.8'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'n', 'concept': 'tele', 'id': 't4.8'}
+(t/thematic.py): transform_dep: child-->{'id': 't4.7'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.5', 'parent': 't4.2'}
+(t/thematic.py): transform_dep: parent-->{'id': 't4.2'}
+(t/thematic.py): transform_dep: child-->{'id': 't4.5'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.4', 'parent': 't4.2'}
+(t/thematic.py): transform_dep: parent-->{'id': 't4.2'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'v', 'tense': None, 'concept': 'comer', 'id': 't4.4'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.9', 'parent': 't4.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'mirar', 'id': 't4.6'}
+(t/thematic.py): transform_dep: child-->{'id': 't4.9'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.8', 'parent': 't4.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'mirar', 'id': 't4.6'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'n', 'concept': 'tele', 'id': 't4.8'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.2', 'parent': 't4.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'mirar', 'id': 't4.6'}
+(t/thematic.py): transform_dep: child-->{'id': 't4.2'}
+(t/thematic.py): transform_dep
+(t/base.py): transform_dep
+(t/thematic.py): transform_dep: edge-->{'child': 't4.1', 'parent': 't4.6'}
+(t/thematic.py): transform_dep: parent-->{'sempos': 'v', 'tense': None, 'concept': 'mirar', 'id': 't4.6'}
+(t/thematic.py): transform_dep: child-->{'sempos': 'r', 'concept': 'siempre', 'id': 't4.1'}
+(t/thematic.py): post_process
+(t/base.py): post_process
+(t/base.py): _add_to_graph
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_node
+(g/graph.py): add_edge
+(g/graph.py): add_edge
+(t/base.py): post_insertion
+(t/base.py): after_all
+(g/graph.py): linearize
+(l/semtriplets.py): get_root_nodes
+(g/graph.py): nodes
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(l/semtriplets.py): expand_node
+(g/graph.py): edges
+(./test.py): resultado del pipeline.run
+
+llamar(gato,tom)
+haber(jerry,ratón)

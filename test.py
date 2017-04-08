@@ -33,10 +33,12 @@ arg_parser.add_argument('-d','--display',action='store_true',help='display a dra
 arg_parser.add_argument('-p','--print-json',action='store_true',help='print the graph in json')
 
 try:
+    print("(./test.py): dentro del try")
     import argcomplete
     import glob
     from os.path import dirname, basename
     def config_completer(prefix, **kwargs):
+        print("(./test.py) - config_completer")
         return (basename(c)[:-5] for c in glob.glob(dirname(__file__)+"/configs/*.yaml"))
     arg_config.completer = config_completer
     argcomplete.autocomplete(arg_parser)
@@ -46,31 +48,46 @@ except ImportError:
 args = arg_parser.parse_args()
 
 import yaml
+#se importa el modulo pipeline de grafeno
 from grafeno import pipeline
 
+#si la entrada e sun fichero de texto
 if args.file:
+    #se lee el contenido del fichero adjunto a transformar
     text = args.file.read()
+#leemos el texto de una cadena
 else:
+    #se lee la cadena transformar
     text = args.string
 
+#si se ha usado la opcion -c
 if args.config_file:
     try:
+        print("(./test.py): se ha usado la opcion -c")
+        print("(./test.py): accediendo a %r.yaml" % args.config_file)
         config_file = open('configs/'+args.config_file+'.yaml')
     except FileNotFoundError:
+        print("(./test.py): archivo de configuracion .yaml no encontrado")
         config_file = None
     if not config_file:
+        print("(./test.py): accediendo al file_config sin extension")
         config_file = open(args.config_file)
     config = yaml.load(config_file)
+#si no se usan los ficheros de configuracion, se opera con los transformadores
 else:
     config = {}
     if args.transformers:
         config['transformers'] = args.transformers
+        print("(./test.py): args.transformers-> %r" % args.transformers)
     if args.linearizers:
         config['linearizers'] = args.linearizers
+        print("(./test.py): args.linearizers-> %r" % args.linearizers)
+
 
 config['text'] = text
 
 result = pipeline.run(config)
+print("(./test.py): resultado del pipeline.run\n")
 
 if args.print_json:
     print(result.to_json())

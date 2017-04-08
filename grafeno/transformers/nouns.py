@@ -8,6 +8,7 @@ class Transformer (PosExtract):
     '''Processes noun grammatemes and noun-noun modifications, such as apposition.'''
 
     def transform_node (self, msnode):
+        # print("(t/nouns.py): transform_node")
         sem = super().transform_node(msnode)
         sempos = sem.get('sempos')
         if sempos == 'n':
@@ -16,6 +17,7 @@ class Transformer (PosExtract):
         return sem
 
     def transform_dep (self, dep, pid, cid):
+        # print("(t/nouns.py): transform_dep")
         edge = super().transform_dep(dep, pid, cid)
         p = self.nodes[pid]
         c = self.nodes[cid]
